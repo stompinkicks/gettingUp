@@ -1,5 +1,7 @@
 GettingUp::Application.routes.draw do
 
+  resources :patterns
+
   devise_for :users
 
   get 'about' => 'pages#about'

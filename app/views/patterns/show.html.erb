@@ -1,6 +1,9 @@
-
+<%= image_tag @pattern.image %>
 <p>
   <%= @pattern.description %>
+</p>
+<p>
+  By <%= @pattern.user.name %>
 </p>
 
 <% if current_user == @pattern.user %>

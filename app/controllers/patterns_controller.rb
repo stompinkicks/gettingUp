@@ -74,7 +74,7 @@ class PatternsController < ApplicationController
   # DELETE /patterns/1
   # DELETE /patterns/1.json
   def destroy
-    @pattern = current_user.patterns..find(params[:id])
+    @pattern = current_user.patterns.find(params[:id])
     @pattern.destroy
 
     respond_to do |format|

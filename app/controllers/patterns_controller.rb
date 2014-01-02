@@ -1,4 +1,6 @@
 class PatternsController < ApplicationController
+  before_filter :authenticate_user!, except: [:index]
+
   # GET /patterns
   # GET /patterns.json
   def index
@@ -24,7 +26,7 @@ class PatternsController < ApplicationController
   # GET /patterns/new
   # GET /patterns/new.json
   def new
-    @pattern = Pattern.new
+    @pattern = current_user.patterns.new
 
     respond_to do |format|
       format.html # new.html.erb
@@ -34,13 +36,13 @@ class PatternsController < ApplicationController
 
   # GET /patterns/1/edit
   def edit
-    @pattern = Pattern.find(params[:id])
+    @pattern = current_user.patterns.find(params[:id])
   end
 
   # POST /patterns
   # POST /patterns.json
   def create
-    @pattern = Pattern.new(params[:pattern])
+    @pattern = current_user.patterns.new(params[:pattern])
 
     respond_to do |format|
       if @pattern.save
@@ -56,7 +58,7 @@ class PatternsController < ApplicationController
   # PUT /patterns/1
   # PUT /patterns/1.json
   def update
-    @pattern = Pattern.find(params[:id])
+    @pattern = current_user.patterns.find(params[:id])
 
     respond_to do |format|
       if @pattern.update_attributes(params[:pattern])
@@ -72,7 +74,7 @@ class PatternsController < ApplicationController
   # DELETE /patterns/1
   # DELETE /patterns/1.json
   def destroy
-    @pattern = Pattern.find(params[:id])
+    @pattern = current_user.patterns..find(params[:id])
     @pattern.destroy
 
     respond_to do |format|

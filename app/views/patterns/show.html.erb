@@ -3,6 +3,7 @@
   <%= @pattern.description %>
 </p>
 
-
-<%= link_to 'Edit', edit_pattern_path(@pattern) %> |
+<% if current_user == @pattern.user %>
+	<%= link_to 'Edit', edit_pattern_path(@pattern) %> |
+<% end %>
 <%= link_to 'Back', patterns_path %>

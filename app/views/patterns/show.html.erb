@@ -1,12 +1,18 @@
-<%= image_tag @pattern.image %>
-<p>
-  <%= @pattern.description %>
-</p>
-<p>
-  By <%= @pattern.user.name %>
-</p>
+<div class="row">
+	<div class="span6 offset3">
+		<div class="well">
+				<%= image_tag @pattern.image %>
+			<p>
+  			<%= @pattern.description %>
+			</p>
+			<p>
+  			By <%= @pattern.user.name %>
+			</p>
 
-<% if current_user == @pattern.user %>
-	<%= link_to 'Edit', edit_pattern_path(@pattern) %> |
-<% end %>
-<%= link_to 'Back', patterns_path %>
+				<% if current_user == @pattern.user %>
+				<%= link_to 'Edit', edit_pattern_path(@pattern) %> |
+		<% end %>
+			<%= link_to 'Back', patterns_path %>
+		</div>
+	</div>
+</div>

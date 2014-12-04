@@ -1,9 +1,13 @@
-<tr>
-<td><%= image_tag pattern.image (:medium) %></td>
-<td><%= pattern.description %></td>
-<td><%= link_to 'Show', pattern %></td>
+<div class="box">
+<%= image_tag pattern.image (:medium) %>
+<p class="description">
+<%= pattern.description %>
+</p>
+<%= link_to 'Show', pattern %>
 <% if current_user == pattern.user %>
-	<td><%= link_to 'Edit', edit_pattern_path(pattern) %></td>
-	<td><%= link_to 'Destroy', pattern, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <p>
+	<%= link_to 'Edit', edit_pattern_path(pattern) %>
+	<%= link_to 'Destroy', pattern, method: :delete, data: { confirm: 'Are you sure?' } %>
+	</p>
 <% end %>
-</tr>
+</div>

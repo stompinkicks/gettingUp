@@ -5,6 +5,7 @@ source 'https://rubygems.org'
 	gem 'devise'
   gem 'simple_form'
   gem "paperclip", "~> 3.0"
+  gem "aws-sdk"
 
 # First evvironment run bundle install --without production
 group :production do 

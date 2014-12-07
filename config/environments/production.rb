@@ -67,5 +67,15 @@ GettingUp::Application.configure do
 
   # In production, :host should be set to the actual host of the application
   config.action_mailer.default_url_options = { :host => 'localhost:3000'}
+
+  # Paperclip should use Amazon s3 on Heroku
+  config.paperclip_defaults = {
+  :storage => :s3,
+  :s3_credentials => {
+    :bucket => "bestpatterns",
+    :access_key_id => "AKIAI6CF6BP7AO257YUQ",
+    :secret_access_key => "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"
+  }
+}
   
 end

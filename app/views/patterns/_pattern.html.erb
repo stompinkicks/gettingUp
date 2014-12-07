@@ -1,9 +1,9 @@
 <div class="box">
-<%= image_tag pattern.image (:medium) %>
+<%= link_to (image_tag pattern.image (:medium)), pattern %>
 <p class="description">
 <%= pattern.description %>
 </p>
-<%= link_to 'Show', pattern %>
+
 <% if current_user == pattern.user %>
     <p>
 	<%= link_to 'Edit', edit_pattern_path(pattern) %>

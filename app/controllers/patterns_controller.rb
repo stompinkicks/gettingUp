@@ -4,7 +4,7 @@ class PatternsController < ApplicationController
   # GET /patterns
   # GET /patterns.json
   def index
-    @patterns = Pattern.all
+    @patterns = Pattern.order("created_at desc")
 
     respond_to do |format|
       format.html # index.html.erb

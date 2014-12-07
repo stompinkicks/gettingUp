@@ -69,13 +69,13 @@ GettingUp::Application.configure do
   config.action_mailer.default_url_options = { :host => 'localhost:3000'}
 
   # Paperclip should use Amazon s3 on Heroku
-  config.paperclip_defaults = {
-  :storage => :s3,
-  :s3_credentials => {
-    :bucket => "Create new bucket with secure git repo",
-    :access_key_id => "Create new key with secure git repo",
-    :secret_access_key => "Create new key with secure git repo"
-  }
-}
+  #config.paperclip_defaults = {
+  #:storage => :s3,
+  #:s3_credentials => {
+  #  :bucket => "Create new bucket with secure git repo",
+  #  :access_key_id => "Create new key with secure git repo",
+  #  :secret_access_key => "Create new key with secure git repo"
+  #}
+  #}
   
 end

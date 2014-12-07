@@ -72,9 +72,9 @@ GettingUp::Application.configure do
   config.paperclip_defaults = {
   :storage => :s3,
   :s3_credentials => {
-    :bucket => "bestpatterns",
-    :access_key_id => "AKIAI6CF6BP7AO257YUQ",
-    :secret_access_key => "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"
+    :bucket => "Create new bucket with secure git repo",
+    :access_key_id => "Create new key with secure git repo",
+    :secret_access_key => "Create new key with secure git repo"
   }
 }
   

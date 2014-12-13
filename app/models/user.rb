@@ -12,8 +12,8 @@ class User < ActiveRecord::Base
   has_many :patterns
 
   # attr_accessible :title, :body
-  has_attached_file :avatar, :styles => { :show => "800x600#" }
-  
+  has_attached_file :avatar, :styles => { :show => "150x150#" }
+
   validates_attachment :avatar, presence: true,
                        content_type: { content_type: ['image/jpeg', 'image/jpg', 'image/png', 'image/gif']},
                        size: { less_than: 5.megabytes }
